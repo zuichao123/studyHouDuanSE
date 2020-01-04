@@ -1,0 +1,37 @@
+==  和 equals  的区别
+     ==  对于基本类型来说是值⽐较；
+     ⽽对于引⽤类型⽐较的是引⽤，是否是指向同⼀个对象的引⽤。
+
+    equals  默认是引⽤⽐较；
+    ⽽ Integer、String 等包装类都重写了 equals ⽅法，改为了值⽐较。
+
+    所以对象都可以看作是继承⾃ Object ，如果⾃定义类未覆写equals，调⽤对象实例的 equals ⽅法默认是引⽤⽐较。
+
+String/StringBuffer/StringBuilder的区别
+    String 为不可变字符串；StringBuffer 和 StringBuilder 为字符串可变对象。
+    String 的 substring 等修改操作每次都会产⽣⼀个新的 String 对象；
+    字符串拼接性能 String 低于StringBuffer，⽽ StringBuffer 低于 StringBuilder。
+    StringBuffer 是线程安全的，StringBuilder ⽽线程不安全的。
+    StringBuffer和StringBuilder⼆者都是继承⾃ AbstractStringBuilder；
+    它们的唯⼀区别是 StringBuffer 的所有⽅法都使⽤了 synchronized 修饰符来保证线程安全。
+
+String 对象的 intern 的作⽤
+    String 对象的 intern ⽅法⽤于字符串的显示排重。
+    调⽤此⽅法时，JVM 去字符串常量池查找池中是否已经存在该字符串，如果已存在则直接返回它的引⽤；如果不存在则在池中先创建然后返回其引⽤。
+
+String 不可变性的优点
+    字符串不可变，因此可以通过字符串常量池来实现，共享对象，从⽽节省空间，提⾼性能。
+    多线程安全，因为字符串不可变，所以当字符串被多个线程共享时不会存在线程安全问题。
+    适合做缓存的 Key，因为字符串不可变，因此它的哈希值也就不变；创建时它的哈希值就被缓存了，不需要重新计算，速度更快。
+
+String 是否可以被继承
+    String 不能被继承。因为 String 被声明为 final，所以不能被继承。
+
+
+
+
+
+
+
+
+
