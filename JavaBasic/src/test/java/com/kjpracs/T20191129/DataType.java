@@ -1,6 +1,6 @@
-package com.sunjian.kjpracs;
+package com.kjpracs.T20191129;
 
-public class T20191129 {
+public class DataType {
     public static void main(String[] args) {
         Integer num1 = 127;
         Integer num2 = 127;

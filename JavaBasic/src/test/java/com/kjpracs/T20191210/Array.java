@@ -1,11 +1,11 @@
-package com.sunjian.kjpracs;
+package com.kjpracs.T20191210;
 
 import java.util.Arrays;
 import java.util.Random;
 
 import static java.lang.System.arraycopy;
 
-public class T20191210 {
+public class Array {
     public static void main(String[] args) {
         // 数组遍历
         Integer[] arr = {1,2,5,3,6};
