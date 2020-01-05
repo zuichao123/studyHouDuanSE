@@ -59,10 +59,11 @@ public class AutoProxy implements InvocationHandler {
         // auto proxy JDK特性也叫JDK代理，代理目标必须是接口实现的否则不能动态代理
         UserDao dao3 = new UserDaoImpl();
 
-        ClassLoader classLoader = dao3.getClass().getClassLoader(); // 接口类加载器
-        Class[] interfaces = dao3.getClass().getInterfaces(); // 接口类
-        AutoProxy handler = new AutoProxy(dao3); // 动态代理事件
+        ClassLoader classLoader = dao3.getClass().getClassLoader(); // 被代理对象的接口类加载器
+        Class[] interfaces = dao3.getClass().getInterfaces(); // 代理对象实现的接口类
+        AutoProxy handler = new AutoProxy(dao3); // 动态代理事件处理器
 
+        // 被代理的对象proxy2必须是接口
         UserDao proxy2 = (UserDao) Proxy.newProxyInstance(classLoader, interfaces, handler);
         User user3 = new User();
         user3.setName("王五");
