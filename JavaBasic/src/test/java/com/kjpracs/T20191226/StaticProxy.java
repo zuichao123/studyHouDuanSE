@@ -6,9 +6,9 @@ package com.kjpracs.T20191226;
  * UserDaoImpl 类的代码。
  * 静态代理
  */
-public class UserDaoProxy implements UserDao {
+public class StaticProxy implements UserDao {
     private UserDao target;
-    public UserDaoProxy(UserDao dao){
+    public StaticProxy(UserDao dao){
         target = dao;
     }
 
@@ -23,5 +23,21 @@ public class UserDaoProxy implements UserDao {
             return;
         }
         target.save(user);
+    }
+
+    @Override
+    public void delete() {
+        System.out.printf("staticproxy 执行删除");
+    }
+
+    public static void main(String[] args) {
+        // static proxy
+        User user2 = new User();
+        user2.setName("李四");
+        user2.setAge(2);
+
+        UserDao dao2 = new UserDaoImpl();
+        StaticProxy proxy = new StaticProxy(dao2);
+        proxy.save(user2);
     }
 }

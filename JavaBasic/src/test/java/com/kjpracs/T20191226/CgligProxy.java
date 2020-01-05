@@ -10,7 +10,7 @@ import org.testng.ITestContext;
 import java.lang.reflect.Method;
 import java.util.List;
 
-public class CgligProxy implements IMethodInterceptor {
+public class CgligProxy implements IMethodInterceptor, Callback {
     private Object target;
 
     public CgligProxy(Object target) {
@@ -46,7 +46,7 @@ public class CgligProxy implements IMethodInterceptor {
     public Object getProxyInstance() {
         Enhancer en = new Enhancer();
         en.setSuperclass(target.getClass());
-        en.setCallback((Callback) this);
+        en.setCallback(this);
         return en.create();
     }
 
@@ -61,5 +61,17 @@ public class CgligProxy implements IMethodInterceptor {
     @Override
     public List<IMethodInstance> intercept(List<IMethodInstance> methods, ITestContext context) {
         return null;
+    }
+
+    public static void main(String[] args) {
+        // cglib proxy
+        UserDao dao4 = new UserDaoImpl();
+
+        User user4 = new User();
+        user4.setName("张三");
+        user4.setAge(33);
+
+        UserDao proxy4 = (UserDao) new CgligProxy(dao4).getProxyInstance();
+        proxy4.save(user4);
     }
 }
