@@ -2,6 +2,24 @@ package com.sunjian.collection;
 
 import java.util.*;
 
+/**
+ * List 主要有两种：ArrayList 和 LinkedList
+ * ArrayList：内部是使用数组来实现的
+ * LinkedList：内部使用的是一个双向链表来实现
+ *
+ * 创建：无参数构建；有参数构造  1 指定容量大小 2 复制已存在的List来创建
+ * 添加：1 头插 2 尾插 3 中间插入
+ * 删除：1 头删 2 尾删 3 中间删除
+ * 遍历：
+ *      1 使用for循环
+ *      2 使用迭代器 Iterator  ListIterator（前后都可以移动）
+ *      3 使用迭代器对List进行添加、删除操作
+ *      4 迭代器的使用注意事项：
+ *          1 在使用迭代器对列表进行操作时，源对象不能发生结构性变化，否则迭代器操作会抛异常
+ *  底层实现原理及主要JDK源码：内部存储结构、添加/删除/遍历操作的流程
+ *  对List 进行排序：冒泡、插入、选择
+ */
+
 public class ListStudy {
 
     /*
