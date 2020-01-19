@@ -2,7 +2,7 @@ package com.shen.string;
 
 import org.testng.annotations.Test;
 
-public class StringTest {
+public class StringGuDingLengthXianChengChi {
     @Test
     public void testOp3(){
         long start = System.currentTimeMillis();

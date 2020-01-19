@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class ArrayTest {
+public class ArrayGuDingLengthXianChengChi {
     int[] arr1 = {1,2,3,4,5,6,7,8};
     int[] arr2 = {1,2,3,4,5,6,7,8};
 

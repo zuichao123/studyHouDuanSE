@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.Date;
 
-public class EmployeeTest {
+public class EmployeeGuDingLengthXianChengChi {
     @Test
     public void testPrint(){
         Employee yg1 = new Employee();

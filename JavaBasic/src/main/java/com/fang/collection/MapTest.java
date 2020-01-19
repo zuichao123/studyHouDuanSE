@@ -99,7 +99,7 @@ public class MapTest {
      *
      *
      * 总结：
-     *      HashMap：存储一组无效，并且key值不可以重复的数据
+     *      HashMap：存储一组无序，并且key值不可以重复的数据
      *      HashTable：存储一组无序，并且key值不可重复的数据，Hashtable的使用与HashMap基本一致
      *                 ，区别在于Hashtable是线程安全的，性能较低，HashMap是非线程安全的，性能较高。
      *      TreeMap：存储一组有序，并且key值不可重复的数据，这里的有序是指集合会自动根据key值对元素

@@ -3,7 +3,7 @@ package com.shen.util;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class StringUtilsTest {
+public class StringUtilsGuDingLengthXianChengChi {
     @Test
     public void testTrimAll(){
         String s = "hello";
