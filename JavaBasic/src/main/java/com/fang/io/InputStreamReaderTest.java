@@ -1,4 +1,4 @@
-package com.fang.file;
+package com.fang.io;
 
 import java.io.*;
 

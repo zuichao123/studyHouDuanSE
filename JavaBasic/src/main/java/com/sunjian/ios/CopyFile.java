@@ -47,7 +47,7 @@ public class CopyFile {
         BufferedWriter bufw = null;
         try {
             file.createNewFile();
-//            bufr = new BufferedReader(new FileReader(file));
+//            bufr = new BufferedReader(new FileReader(io));
 //            bufw = new BufferedWriter(new FileWriter(file2));
             bufr = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
             bufw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file2)));
