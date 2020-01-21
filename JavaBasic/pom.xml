@@ -32,6 +32,11 @@
             <artifactId>spring-core</artifactId>
             <version>5.2.2.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.1</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -1,5 +1,8 @@
-package com.fang.reflect.proxy;
+package com.fang.reflect.proxy.phoneProxy;
 
+/**
+ * 静态代理类
+ */
 public class PhoneProxy implements Phone {
     private Phone phone;
     public PhoneProxy(Phone phone){
@@ -8,7 +11,7 @@ public class PhoneProxy implements Phone {
 
     @Override
     public String sailPhone() {
-        System.out.println("代理开始销售");
+        System.out.println("静态代理开始销售");
         return this.phone.sailPhone();
     }
 }

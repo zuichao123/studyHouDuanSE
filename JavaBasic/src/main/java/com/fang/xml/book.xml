@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books id="test">
+    <book id="1" type="计算机">
+        <name>java高级编程</name>
+        <author>张三</author>
+        <price>33.5</price>
+    </book>
+    
+    <book id="3" type="计算机">
+        <name>MySQL数据库</name>
+        <author>汤姆</author>
+        <price>60.5</price>
+    </book>
+</books>

@@ -1,4 +1,4 @@
-package com.fang.reflect.proxy;
+package com.fang.reflect.proxy.phoneProxy;
 
 public interface Phone {
     public String sailPhone();

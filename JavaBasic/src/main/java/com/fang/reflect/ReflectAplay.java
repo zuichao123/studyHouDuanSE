@@ -31,6 +31,22 @@ import java.lang.reflect.Method;
  *
  *      动态代理
  *          指在编译期并没有确定具体的代理类，在程序运行期间根据java的指示动态生成的方式。
+ *
+ *      通过java.lang.reflect.InvocationHandler接口和java.lang.reflect.Proxy类完成动态代理模式，动态指在编程代码的时候
+ *          并不知道具体的代理类是什么结构，在程序运行期间生产JDK动态代理类和动态代理对象。
+ *
+ *          动态代理类：自定义类，实现InvocationHandler接口
+ *
+ *    代理模式：
+ *          1、委托类和代理类需要实现同一个接口；
+ *          2、在代理类中定义一个委托类的成员变量；在创建代理对象时，需要将委托对象传入到代理对象中；
+ *          3、在代理类的接口方法中调用委托对象的接口方法；
+ *
+ *          静态代理：接口、委托类、静态代理类
+ *          动态代理：接口、委托类、代理模板类（不是代理类，程序运行期间借助于此模式动态生成一个代理类）
+ *
+ *              代理模板类需要实现InvocationHandler接口
+ *
  */
 public class ReflectAplay {
     public static void main(String[] args) {
